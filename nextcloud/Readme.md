@@ -12,6 +12,15 @@ to similar software such as Dropbox and Google Drive.
 
 To run heat and create a Nextcloud instance, **note: this will create a volume for you**
 
+## With dashboard
+Copy the url, click on [Create-stack](https://dashboard.cloud.catalyst.net.nz/project/stacks/select_template),
+choose URL as template source and paste URL into *Template URL* field.
+
+```shell
+https://raw.githubusercontent.com/catalyst-cloud/catalystcloud-orchestration/master/nextcloud/heat/nextcloud-combined.yaml
+```
+
+## With command line client
 ```shell
 openstack stack create -t nextcloud.yaml nextcloud-stack --parameter hostname="<your-host-name>" --parameter domainname="<your-domain-name>" --parameter ddns_password="<your-ddns-password>" --parameter keyname="<your-key-name>" --parameter ddns_script_url="<your-ddns-script-url>"
 ```
